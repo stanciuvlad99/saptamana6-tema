@@ -8,6 +8,7 @@ import static org.testng.Assert.assertTrue;
 
 public class HomeButton extends BaseTest{
 
+
     @Test
     public void fromLoginToHomePage(){
         driver.findElement(By.id("menu-toggle")).click();
