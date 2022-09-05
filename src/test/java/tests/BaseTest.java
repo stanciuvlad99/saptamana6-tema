@@ -4,16 +4,19 @@ import driver.WebdriverConfigs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.MalformedURLException;
+
 public class BaseTest {
 
-    protected ChromeDriver driver=null;
+    protected RemoteWebDriver driver=null;
 
     @BeforeMethod
-    public void beforeMethod(){
-        driver= WebdriverConfigs.getChomeDriver();
+    public void beforeMethod() throws MalformedURLException {
+        driver= WebdriverConfigs.getRemoteDriver();
         driver.get("https://katalon-demo-cura.herokuapp.com");
 
     }

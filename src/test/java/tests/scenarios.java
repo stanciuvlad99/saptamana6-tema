@@ -53,7 +53,8 @@ public class scenarios extends BaseTest{
         comment.clear();
         comment.sendKeys("Hello!");
 //        assertEquals(comment.getText().toLowerCase(), "hello!");
-
+        driver.findElement(By.id("txt_comment")).getText();
+        System.out.println(driver.findElement(By.id("txt_comment")).getText());
         assertTrue(isElementPresent(By.id("btn-book-appointment")),
                 "Appointment button is missing.");
         driver.findElement(By.id("btn-book-appointment")).click();
